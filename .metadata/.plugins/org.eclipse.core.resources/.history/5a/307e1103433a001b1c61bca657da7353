@@ -1,0 +1,24 @@
+package arreglos;
+
+public class Ejercicio3 extends Ejercicio1{
+    
+	
+	public Ejercicio3(int valor) {
+		super(valor);
+		
+	}
+	
+	public void mezclarTercerForma() {
+		
+	}
+	
+	//sobreCargo el metodo mostrarElementos
+	   public void mostrarElementos(int a[]) {
+		   System.out.println("\n\nMostrando Elementos del arreglo:");
+		   for(int elemento: a) {
+			   System.out.print(elemento+" ");
+		   }
+	   }
+	
+	
+}

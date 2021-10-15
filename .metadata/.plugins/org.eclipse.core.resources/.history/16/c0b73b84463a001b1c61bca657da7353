@@ -1,0 +1,69 @@
+package arreglos;
+
+import java.util.Scanner;
+
+public class Ejercicio3 extends Ejercicio1 {
+
+	public Ejercicio3(int valor) {
+		super(valor);
+
+	}
+
+	public void mezclarTercerForma(int a[], int b[]) {
+
+		int indicador; // La voy a usar para medir la posicion de la cual tengo que empezar a extraer
+						// los datos
+		int contador; // La voy a usar para ir llenando mi tercer arreglo del 0 al 24
+		int posicion; // variable auxiliar que voy a utilizar dentro de mis ciclos
+		int i; // iterador
+
+		i = indicador = contador = 0;
+
+		do {
+			posicion = indicador;
+
+			while (i < 3) {
+				super.arreglo[contador] = a[posicion];
+				posicion++;
+				i++;
+				contador++;
+			}
+			
+			i=0; posicion = indicador;
+			
+			while (i < 3) {
+				
+				super.arreglo[contador] = b[posicion];
+				posicion++;
+				i++;
+				contador++;
+			}
+			
+			indicador = indicador + 3;
+			 
+		} while (i < 24);
+
+	}
+
+	// sobreCargo el metodo mostrarElementos
+	public void mostrarElementos(int a[]) {
+		System.out.println("\n\nMostrando Elementos del arreglo:");
+		for (int elemento : a) {
+			System.out.print(elemento + " ");
+		}
+	}
+
+	public int[] pedirElementos(int a[] , int longitud) {
+
+		Scanner in = new Scanner(System.in);
+		int i;
+
+		for (i = 0; i < longitud; i++) {
+			System.out.println("Ingrese numero " + (i + 1));
+			a[i] = in.nextInt();
+		}
+
+		return a;
+	}
+
+}

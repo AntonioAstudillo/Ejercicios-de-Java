@@ -1,0 +1,35 @@
+package ficheros;
+
+import java.io.*;
+
+
+public class EscribirFichero  {
+
+	private String nombreFichero; 
+	private BufferedWriter bw;
+	
+	//constructor
+	public EscribirFichero()  {
+		
+		this.nombreFichero = "archivo.txt";
+		
+		try {
+			bw = new BufferedWriter(new FileWriter("c://Users//Antonio//Desktop//archivo.txt",true));
+			
+		}catch(IOException e) {
+			System.out.println("Hubo un problema "+e);
+		}
+				
+	}//cierra constructor 
+	
+	public void escribirEnArchivo(String texto) {
+		try {
+			this.bw.append(texto);
+			this.bw.newLine();
+			this.bw.close();
+		}catch(IOException e) {
+			System.out.println("Hubo una excepcion"+e);
+		}finally {
+		}
+	}
+}

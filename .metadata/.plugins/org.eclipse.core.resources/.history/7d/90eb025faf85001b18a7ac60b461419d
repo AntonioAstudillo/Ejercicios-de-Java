@@ -1,0 +1,45 @@
+package ficheros;
+
+import java.io.*;
+
+
+public class EscribirFichero extends Writer {
+
+	String nombreFichero = "archivo.txt";
+	File fichero = new File(nombreFichero);
+	
+	public EscribirFichero()  {
+		
+		try {
+			if(fichero.exists()) {
+				BufferedWriter bw = new BufferedWriter(new FileWriter(fichero));
+			}
+		}catch(IOException e) {
+			System.out.println("El fichero no se pudo abrir");
+		}
+		
+	}
+	
+	@Override
+	public void close() throws IOException {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void flush() throws IOException {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void write(char[] cbuf, int off, int len) throws IOException {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+   
+   
+   
+   
+   
+}

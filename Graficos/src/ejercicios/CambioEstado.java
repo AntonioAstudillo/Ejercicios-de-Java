@@ -1,0 +1,52 @@
+package ejercicios;
+import javax.swing.*;
+import java.awt.Frame;
+import java.awt.event.*;
+
+
+public class CambioEstado {
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+        MarcoEstado mimarco = new MarcoEstado();
+        mimarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
+
+}
+
+class MarcoEstado extends JFrame{
+	
+	public MarcoEstado()
+	{
+		setVisible(true);
+		setBounds(300,300,500,350);
+		
+		Cambio_Estado nuevoEstado = new Cambio_Estado();
+		
+		addWindowStateListener(nuevoEstado);
+		
+	}
+	
+	
+}
+
+class Cambio_Estado implements WindowStateListener
+{
+	public void windowStateChanged(WindowEvent e)
+	{
+		System.out.println("La ventana ha cambiado de estado");	
+	
+	  // System.out.println(e.getNewState());
+	  
+	  if(e.getNewState()==Frame.MAXIMIZED_BOTH)
+	  {
+		  System.out.println("La ventana está a pantalla completa");
+	  }
+	  
+	
+	}
+     
+	
+}

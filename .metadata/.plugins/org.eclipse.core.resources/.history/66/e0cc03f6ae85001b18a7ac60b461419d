@@ -1,0 +1,12 @@
+package ficheros;
+
+import java.io.File;
+
+public class EscribirFichero {
+   String nombreFichero = "archivo.txt";
+   File fichero = new File(nombreFichero);
+   
+   
+   
+   
+}

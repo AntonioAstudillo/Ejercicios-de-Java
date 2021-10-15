@@ -1,0 +1,7 @@
+package lista1;
+
+public class HerenciaPila extends Lista {
+   public HerenciaPila() {
+	   super("pila");
+   }
+}

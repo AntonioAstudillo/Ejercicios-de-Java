@@ -1,0 +1,20 @@
+package arreglos;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Ejercicio3 objeto = new Ejercicio3(12);
+		int a[] = new int[6];
+		int b[] = new int[6];
+		
+		a = objeto.pedirElementos(a , 6);
+		b = objeto.pedirElementos(b, 6);
+		
+		objeto.mezclarTercerForma(a, b);
+		objeto.mostrarElementos();
+	
+		
+
+	}
+
+}

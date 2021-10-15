@@ -1,0 +1,21 @@
+package ficheros;
+
+import java.util.Scanner;
+
+public class PruebaEscribir {
+
+	public static void main(String[] args) {
+		
+		EscribirFichero objeto = new EscribirFichero();
+		Scanner in = new Scanner(System.in);
+		String texto;
+		
+		System.out.println("Ingrese el texto que quiera almacenar en el archivo");
+		texto = in.nextLine();
+		
+		objeto.escribirEnArchivo(texto);
+		objeto.leerArchivo();
+
+	}
+
+}

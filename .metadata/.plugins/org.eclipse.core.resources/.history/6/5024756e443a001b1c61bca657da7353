@@ -1,0 +1,17 @@
+package arreglos;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Ejercicio1 objeto = new Ejercicio1();
+		
+		objeto.pedirElementos();
+		objeto.mostrarElementos();
+		objeto.mostrarDiferente();
+		//objeto.llenarConAleatorios();
+		//objeto.mostrarElementos();
+		
+
+	}
+
+}

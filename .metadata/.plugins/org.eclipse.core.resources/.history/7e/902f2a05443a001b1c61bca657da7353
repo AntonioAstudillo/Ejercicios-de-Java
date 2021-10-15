@@ -1,0 +1,40 @@
+package arreglos;
+
+import java.util.Scanner;
+
+public class Ejercicio3 extends Ejercicio1{
+    
+	
+	public Ejercicio3(int valor) {
+		super(valor);
+		
+	}
+	
+	public void mezclarTercerForma() {
+		
+	}
+	
+	//sobreCargo el metodo mostrarElementos
+	   public void mostrarElementos(int a[]) {
+		   System.out.println("\n\nMostrando Elementos del arreglo:");
+		   for(int elemento: a) {
+			   System.out.print(elemento+" ");
+		   }
+	   }
+	   
+	   public int[] pedirElementos(int a[]) {
+		    
+		   Scanner in = new Scanner(System.in);
+		   int longitud = a.length;
+		   int i;
+		   
+		   for(i=0; i<longitud; i++) {
+			   System.out.println("Ingrese numero "+(i+1));
+			   a[i] = in.nextInt();
+		   }
+		   
+		   return a;
+	   }
+	
+	
+}
